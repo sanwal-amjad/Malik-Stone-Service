@@ -46,8 +46,14 @@
 .description-setting h1{
 font-size: 30px;
 text-align: center;
+font-weight: bold;
 }
-.description-setting p{
+.description-setting p,ul{
     padding: 0px;
-    font-size: 15px;
+    font-size: 20px;
+}
+.table-container{
+    margin-top: 50px;
+    padding: 30px;
+    border-top: solid 2px rgb(163, 160, 160);
 }
