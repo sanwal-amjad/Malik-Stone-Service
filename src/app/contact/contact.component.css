@@ -1,0 +1,40 @@
+.contact-icon-setting{
+    padding:50px 100px;
+    text-align: center;
+}
+
+.form-setting input,textarea,button{
+font-size: 25px;
+padding: 25px 20px;
+}
+
+.manufacturing-unit-1{
+    text-align: center;
+    margin-top: 10px;
+}
+.manufacturing-unit-1 h1{
+    font-size: 40px;
+    font-weight: bold;
+}
+.contact-icon-setting p{
+    font-size: 20px;
+    
+}
+.factory-pics img{
+    margin:0px 25px;
+    height: 300px;
+    width: 300px;
+}
+input.ng-invalid.ng-touched , textarea.ng-invalid.ng-touched{
+    border-color: red;
+}
+.location{
+   border-top: 2px solid black;
+   margin-top: 20px;
+   margin-bottom: 60px;
+}
+.location h1{
+    font-family: fantasy;
+    font-size: 70px;
+    text-align: center;
+}

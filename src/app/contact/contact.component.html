@@ -1,0 +1,61 @@
+<div class="container-fluid" style="padding:0px"> <img src="../../assets/images/sub header images/c2u.jpg" alt="" style="width: 100%;height: 400px;"> </div>
+<!-- contact information-->
+<div class="container-fluid" style="margin-top: 30px;">
+	<div class="row">
+		<div class=" col-md-6 ">
+			<div class="row">
+				<div class=" col-md-6 contact-icon-setting "> <span class="glyphicon glyphicon-map-marker" style="font-size:  -webkit-xxx-large;"></span>
+					<h1>Corporoate Office</h1>
+					<p>Ittefaq House, 369/D-2 Johar Town, Lahore 54782, Pakistan</p>
+				</div>
+				<div class=" col-md-6  contact-icon-setting"> <span class="glyphicon glyphicon-phone" style="font-size:  -webkit-xxx-large;"></span>
+					<h1>Phone</h1>
+					<p> +92 42 35211692 +92 42 35211693</p>
+				</div>
+			</div>
+			<!--row 2-->
+			<div class="row">
+				<div class=" col-md-6 contact-icon-setting "> <span class="glyphicon glyphicon-envelope" style="font-size:  -webkit-xxx-large;"></span>
+					<h1>Emails</h1>
+					<p> Info@ittefaqsalt.com Sales@ittefaqsalt.com</p>
+				</div>
+				<div class=" col-md-6  contact-icon-setting"> <span class="glyphicon glyphicon-phone" style="font-size:  -webkit-xxx-large;"></span>
+					<h1>Fax</h1>
+					<p> +92 42 35211692 +92 42 35211693 </p>
+				</div>
+			</div>
+		</div>
+		<div class=" col-md-6">
+			<!-- Default form contact -->
+			<form class="text-center border border-light p-5 form-setting" action="" [formGroup]='formObject'>
+				<p class="h4 mb-4" style="font-weight: bold;font-size: 25px;">Inquiry Form</p>
+				<!-- Name -->
+				<input type="text" id="defaultContactFormName" [(ngModel)]="userName" class="form-control mb-4" placeholder="Name" formControlName='name'>
+				<!-- Email -->
+				<input type="email" id="defaultContactFormEmail" [(ngModel)]="email" class="form-control mb-4" placeholder="E-mail" formControlName='ema'>
+				<!-- Phone -->
+				<input type="number" [(ngModel)]="number" class="form-control mb-4" placeholder="Phone Number" formControlName='phon'>
+				<!-- Email -->
+				<input type="text" id="defaultContactFormCountry" [(ngModel)]="country" class="form-control mb-4" placeholder="Country" formControlName='count'>
+				<div class="form-group">
+					<textarea class="form-control rounded-0" [(ngModel)]="message" id="exampleFormControlTextarea2" rows="3" placeholder="Message" formControlName='mes'></textarea>
+				</div>
+				<!-- Send button -->
+				<button class="btn btn-danger btn-block" (click)="sendDataToBackEnd()" type="submit" [disabled]='!formObject.valid'>Send</button>
+			</form>
+			<!-- Default form contact -->
+		</div>
+	</div>
+</div>
+<!-- manufacutring unit -->
+<div class="container location">
+	<h1>Our Location </h1>
+	<div class="row">
+		<div class="col-md-12 manufacturing-unit-1">
+			<div style="width: 100%">
+				<iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Los%20samnabad%20lahore+(malik%20Stone%20Service)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"> </iframe>
+				<!-- <a href="https://www.maps.ie/route-planner.htm">Plan A Journey
+          </a> --></div>
+		</div>
+	</div>
+</div>
