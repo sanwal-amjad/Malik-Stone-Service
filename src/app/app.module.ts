@@ -18,6 +18,7 @@ import { BlogComponent } from './blog/blog.component';
 import { SaltTilesComponent } from './salt-tiles/salt-tiles.component';
 import { AromatherapyComponent } from './aromatherapy/aromatherapy.component';
 import { SaltlampComponent } from './saltlamp/saltlamp.component';
+import { AboutComponent } from './about/about.component';
 
 
 export const createTranslateLoder=(http:HttpClient)=>{
@@ -37,7 +38,8 @@ export const createTranslateLoder=(http:HttpClient)=>{
     BlogComponent,
     SaltTilesComponent,
     AromatherapyComponent,
-    SaltlampComponent
+    SaltlampComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -88,6 +90,10 @@ TranslateModule.forRoot({
     {
       path:'saltlamps',
       component:SaltlampComponent
+    },
+    {
+      path:'about',
+      component: AboutComponent
     }
      ]),
   ],
