@@ -15,8 +15,10 @@ overflow: hidden;
     font-size: small;
     margin-left: 60px;
     margin-top: 20px;
-    border: 2px solid #cccccc;
+    border:2px solid rgb(247, 119, 140);;
     overflow: hidden;
+    padding:0px;
+
 }
 .quality-image-setting img{
     height: 100%;
@@ -58,12 +60,25 @@ overflow: hidden;
     text-align: center;
     font-weight: bold;
     }
-    .description-setting p,li{
+    .description-setting p{
         padding: 0px;
         font-size: 20px;
+        text-align: justify;
+    }
+    .description-setting li{
+        padding: 0px;
+        font-size: 20px;
+        text-align: justify;
+        font-weight: bold;    
     }
     .table-container{
         margin-top: 50px;
         padding: 30px;
         border-top: solid 2px rgb(163, 160, 160);
     }
+.description-setting{
+    border-bottom: 2px solid rgb(163, 160, 160);
+}
+.color-class{
+    color: rgb(247, 119, 140);
+}

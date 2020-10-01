@@ -15,8 +15,12 @@ overflow: hidden;
     font-size: small;
     margin-left: 60px;
     margin-top: 20px;
-    border: 2px solid #cccccc;
+    border: 2px solid rgb(247, 119, 140);
     overflow: hidden;
+    padding:0px;
+}
+.description-setting{
+    border-bottom: 2px solid rgb(163, 160, 160);
 }
 .quality-image-setting img{
     height: 100%;
@@ -60,6 +64,7 @@ overflow: hidden;
     }
     .description-setting p,li{
         padding: 0px;
+        text-align: justify;
         font-size: 20px;
     }
     .table-container{

@@ -21,6 +21,16 @@ height: 650px;
 .img-setting > img {
     width: 100%;
 }
+.welcome-container{
+    background-color:  rgb(80 77 78);
+    color: white;
+    padding-bottom: 41px;
+
+}
+.welcome-button{
+    text-align: center;
+    align-items: center;
+}
 .welcome-setting h1{
     font-family: fantasy;
     font-size: 70px;
@@ -37,14 +47,15 @@ height: 650px;
     text-align: center;
 }
 .story-setting{
-    background-color: rgb(231, 219, 200);
+    background-color: #ddd;
     /* background-image: url(..\..\assets\images\stone2.jpg);
     height: auto;
     width: auto;
     background-repeat:no-repeat;
     background-size: cover; */
-    margin-top: 50px;
-    padding: 68px 22px;
+    /* margin-top: 50px; */
+    padding-top:25px;
+    padding-bottom: 0px;
 }
 .story-setting p{
     /* font-family: fantasy;
@@ -53,6 +64,11 @@ height: 650px;
     border: 3px solid; */
     font-size: 20px;
 
+}
+.manufacturing-unit{
+    /* margin-top: 20px; */
+    padding-bottom: 45px;
+    background-color: #ddd;
 }
 .video-setting{
     margin: 20px 100px;
@@ -75,17 +91,17 @@ height: 650px;
 .why-choose-setting-5-heading{
     font-size: 30px;
     font-weight: bold;
-    color: rgb(247, 119, 140);
-
-   
+    color: rgb(247, 119, 140);   
+    text-align: justify;
 }
 .why-choose-setting-5-paragragh{
         padding:0px 39px;
         font-size: 20px;
+        text-align: justify;
 }
 .products{
-    margin-top:100px;
-    border-top: 2px solid rgb(163, 160, 160);
+    margin-top:30px;
+    /* border-top: 2px solid rgb(163, 160, 160); */
 }
 .product-heading h1{
     font-weight: bold;
@@ -123,6 +139,8 @@ height: 650px;
 .img-hover-box {
     overflow: hidden;
     height: 350px;
+    border-radius: 200px;
+    border:2px solid rgb(247,119,140);
     /* width: 350px; */
 }
 
@@ -183,7 +201,8 @@ height: 650px;
     width: 250px;
 }
 .factory-pics img{
-  border: 4px solid black;
+    border-radius: 5px;
+  border: 4px solid rgb(247, 119, 140);
     height: 100%;
     width: 100%;
 }
