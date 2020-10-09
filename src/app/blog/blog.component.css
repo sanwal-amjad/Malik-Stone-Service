@@ -1,0 +1,53 @@
+.blog-setting + img{
+    height: 350px;
+    width: 350px;
+}
+.blog-setting h2{
+    font-size: 20px;
+    font-weight: bold;
+}
+.color-class{
+    color:  rgb(247, 119, 140)
+}
+.blog-setting p{
+    font-size: 18px;
+
+}
+.blog-setting li{
+    font-size: 18px;
+    padding-top: 20px;
+
+}
+.blog-setting h1{
+    font-weight: bold;
+}
+.img-hover-box img{
+    height: 100%;
+    width:100%
+}
+.img-hover-box {
+    overflow: hidden;
+    width: 750px;
+    height:750px;   
+}
+
+.img-hover-box img{
+    transition: transform .5s, filter 1.5s ease-in-out;
+}
+
+.img-hover-box:hover img {   
+  transform: scale(1.1);
+}
+.commentSection  p{
+    margin-left: 56px;
+}
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched{
+    border-color:red;
+}
+@media only screen and (max-width: 995px) {
+    div.img-hover-box  {
+     width: auto;
+     height: auto;
+    }
+   
+}

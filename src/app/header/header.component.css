@@ -1,0 +1,50 @@
+.navbar-nav >li {
+    font-size: x-large;
+    padding-right: 25px;
+    }
+    
+    .salt-products-in-navbar> a{
+        font-size: large;
+        border-bottom: 2px solid black;
+        background-color: rgb(247, 119, 140);
+        
+    }
+    .products-size-setting{
+        padding:0px;
+    }
+    .products-size-setting a{
+
+        font-size: 25px
+    }
+    .logo{
+        text-align: center;
+        margin-top: 15px;
+        padding: 0px;
+        margin-bottom: 12px;
+     
+    }
+    .logo >img{
+        width: 700px;
+        height: 220px
+    }
+    .logo  >h1{
+        font-family: auto;
+    }
+    .color-class{
+        color: rgb(247, 119, 140);
+    }
+    .header-options> li{
+        font-family: auto;
+    }
+    @media only screen and (max-width: 995px) {
+        div.logo img  {
+            width:auto;
+            height: auto;
+           }
+      }
+    .quality-image-setting h1,p{
+        padding-top: 50px;
+    }
+    .pointer-setting:hover{
+        cursor: pointer;
+    }
