@@ -32,7 +32,7 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
+    NODE
     sendDataToBackEnd()
     {
         let objectForData ={
@@ -50,6 +50,25 @@ export class ContactComponent implements OnInit {
           this.resetAllStates();
      }
 
+//   php
+
+
+// sendDataToBackEnd()
+// {
+//     let objectForData ={
+//         name:this.userName,
+//         message: this.message,
+//         email:this.email,
+//         phone:this.number,
+//         country:this.country
+//       }
+//     console.log("in contact.ts ",objectForData)
+//     this.contactService.createPolicy(objectForData).subscribe(
+//       (res: any) => { },
+//       (err: any) => {})
+//       alert("Information Sent")
+//       this.resetAllStates();
+//  }
         
         // checkEmail(email:any) {
 

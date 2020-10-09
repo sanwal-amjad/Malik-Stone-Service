@@ -3,15 +3,21 @@ import {environment} from './../environments/environment';
 import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Observable, ObservableLike } from 'rxjs';
+// php  
+import { Policy } from  './policy';
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class ContactPageServiceService {
   apiUrl= environment.baseApiUrl;
   httpHeader = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   }
+
   
+
   contactPageUrl = this.apiUrl + '/clientInformation'; 
  
   link = this.apiUrl +  "/reset-password"
