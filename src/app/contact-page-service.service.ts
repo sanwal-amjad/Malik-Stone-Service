@@ -40,4 +40,7 @@ export class ContactPageServiceService {
     createPolicy(policy: Policy): Observable<Policy>{
       return this.http.post<Policy>(`https://broadcast-chains.000webhostapp.com/server/create.php`, policy);
     }
+    getComment(): Observable<CommentModal[]>{
+      return this.http.get<CommentModal[]>(`https://broadcast-chains.000webhostapp.com/server/readComment.php`);
+    }
 }

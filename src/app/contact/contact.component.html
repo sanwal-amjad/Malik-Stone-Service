@@ -31,14 +31,19 @@
 				<p class="h4 mb-4 color-class" style="font-weight: bold;font-size: 25px;">Inquiry Form</p>
 				<!-- Name -->
 				<input type="text" id="defaultContactFormName" [(ngModel)]="userName" class="form-control mb-4" placeholder="Name" formControlName='name'>
+				<span class="text-danger" *ngIf="formObject.get('name').hasError('required') && formObject.get('name').touched">Name is required</span>
 				<!-- Email -->
 				<input type="email" id="defaultContactFormEmail" [(ngModel)]="email" class="form-control mb-4" placeholder="E-mail" formControlName='ema'>
+				<span class="text-danger" *ngIf="formObject.get('ema').hasError('required') && formObject.get('ema').touched">E-mail is required</span>
 				<!-- Phone -->
-				<input type="number" [(ngModel)]="number" class="form-control mb-4" placeholder="Phone Number" formControlName='phon'>
+				<input type="text"  onkeypress="return event.charCode >=43 &&  event.charCode <=57"  [(ngModel)]="number" class="form-control mb-4" placeholder="Phone Number" formControlName='phon'>
+				<span class="text-danger" *ngIf="formObject.get('phon').hasError('required') && formObject.get('phon').touched">Phone is Required is required</span>
 				<!-- Email -->
 				<input type="text" id="defaultContactFormCountry" [(ngModel)]="country" class="form-control mb-4" placeholder="Country" formControlName='count'>
+				<span class="text-danger" *ngIf="formObject.get('count').hasError('required') && formObject.get('count').touched">Country is required</span>
 				<div class="form-group">
 					<textarea class="form-control rounded-0" [(ngModel)]="message" id="exampleFormControlTextarea2" rows="3" placeholder="Message" formControlName='mes'></textarea>
+					<span class="text-danger" *ngIf="formObject.get('mes').hasError('required') && formObject.get('mes').touched">Please Write a Message....</span>
 				</div>
 				<!-- Send button -->
 				<button class="btn btn-danger btn-block" (click)="sendDataToBackEnd()" type="submit" [disabled]='!formObject.valid'>Send</button>

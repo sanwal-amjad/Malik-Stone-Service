@@ -2,6 +2,6 @@ export  class  Policy {
    name:String;
    email:String;
    country:String;
-   phone:Number;
+   phone:String;
    message:String;
 }

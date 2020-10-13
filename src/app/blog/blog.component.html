@@ -60,8 +60,8 @@
         <div class="row" style="border-top: 2px solid rgb(163, 160, 160);">
             <h1 class="color-class">Comments</h1>
             <div class="col-md-12 commentSection" *ngFor="let index of allComments" style="border-top: 1px solid rgb(163, 160, 160);">
-                <h3> <span class="glyphicon glyphicon-user" style="padding-right: 30px;"></span>{{index.clientName}}</h3>
-                <p>{{index.clientComment}}</p>
+                <h3> <span class="glyphicon glyphicon-user" style="padding-right: 30px;"></span>{{index.name}}</h3>
+                <p>{{index.comment}}</p>
             </div>
         </div>
     </div>
@@ -73,13 +73,18 @@
                 <form action="" [formGroup]="formObject">
                     <div class="form-group row" style="margin-top: 30px;">
                         <div class="col-xs-4">
-                            <input class="form-control" placeholder="Enter Name*" type="text" [(ngModel)]="name" formControlName='fName'> </div>
+                            <input class="form-control" placeholder="Enter Name*" type="text" [(ngModel)]="name" formControlName='fName'> 
+                            <span class="text-danger" *ngIf="formObject.get('fName').hasError('required') && formObject.get('fName').touched">Name is required</span>
+                        </div>
                         <div class="col-xs-4">
-                            <input class="form-control" placeholder="Enter Email*" type="email" [(ngModel)]="email" formControlName='mail'> </div>
+                            <input class="form-control" placeholder="Enter Email*" type="email" [(ngModel)]="email" formControlName='mail'> 
+                            <span class="text-danger" *ngIf="formObject.get('mail').hasError('required') && formObject.get('mail').touched">Email is required</span>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="comment">Comment:</label>
                         <textarea class="form-control" rows="5" [(ngModel)]="comment" formControlName='comm'></textarea>
+                        <span class="text-danger" *ngIf="formObject.get('comm').hasError('required') && formObject.get('comm').touched">Please Write a Comment....</span>
                     </div>
                     <button class="btn btn-primary btn-large" (click)="sendComment()" [disabled]="!formObject.valid">Send Comment</button>
                 </form>

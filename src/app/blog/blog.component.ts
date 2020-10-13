@@ -10,6 +10,7 @@ export class BlogComponent implements OnInit {
   name:String;
   comment:String;
   email:String;
+  date:Date= new Date();
   allComments:any = [];
   formObject:FormGroup;
   firstLoad: boolean=true;
@@ -28,7 +29,7 @@ export class BlogComponent implements OnInit {
     window.scroll(0,0);
     this.firstLoad = false;
   }
- // this.updateComments();
+  this.updateComments();
   }
   sendComment(){
  
@@ -36,6 +37,7 @@ export class BlogComponent implements OnInit {
         name:this.name,
         comment:this.comment,
         email:this.email,
+        date:this.date
       }
 
       this.contactService.sendComment(obj).subscribe(
@@ -47,25 +49,25 @@ export class BlogComponent implements OnInit {
         }
       )
         alert("comment updated")
-   //     this.updateComments();
+        this.updateComments();
         this.setState();
       }
    
   
 
-    // updateComments(){
+    updateComments(){
       
       
-    //   this.contactService.getComments().subscribe(
-    //     (res:any)=>{
-    //       this.allComments=res;
-    //        console.log("coments coming from backend ", res);
-    //    },
-    //     (err:any)=>{
+      this.contactService.getComment().subscribe(
+        (res:any)=>{
+          this.allComments=res;
+           console.log("coments coming from backend ", res);
+       },
+        (err:any)=>{
     
-    //     }
-    //   )
-    // }
+        }
+      )
+    }
     
 //   checkEmail(email:any) {
 

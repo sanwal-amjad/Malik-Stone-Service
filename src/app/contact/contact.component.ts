@@ -13,7 +13,7 @@ export class ContactComponent implements OnInit {
   userName: String;
   message:String;
   country:String;
-  number:Number;
+  number:String;
   email:String;
   formObject :FormGroup;
   firstLoad: boolean=true;
@@ -23,7 +23,7 @@ export class ContactComponent implements OnInit {
       
       this.formObject= formBuild.group({
       name:['',Validators.required],
-      phon:['',[Validators.required, Validators.maxLength(11)] ],
+      phon:['',[Validators.required, Validators.maxLength(20)] ],
       ema:['',[Validators.required,Validators.email]],
       mes:['',Validators.required],
       count:['',Validators.required]
