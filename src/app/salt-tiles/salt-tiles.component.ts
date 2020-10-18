@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./salt-tiles.component.css']
 })
 export class SaltTilesComponent implements OnInit {
+  firstLoad: boolean=true;
 
   constructor() { }
 
   ngOnInit(): void {
+    if(this.firstLoad) {
+    window.scroll(0,0);
+    this.firstLoad = false;
+  }
   }
 
 }

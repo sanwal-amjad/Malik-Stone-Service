@@ -9,8 +9,9 @@
     font-size: small;
     margin-left: 60px;
     margin-top: 20px;
-    border: 2px solid #cccccc;
+    border: 2px solid rgb(247, 119, 140);
     overflow: hidden;
+    padding:0px
 }
 .quality-image-setting img{
     height: 100%;
@@ -46,8 +47,22 @@
 .description-setting h1{
 font-size: 30px;
 text-align: center;
+font-weight: bold;
 }
-.description-setting p{
+.description-setting p,ul{
     padding: 0px;
-    font-size: 15px;
+    font-size: 20px;
+    text-align: justify;
+}
+.table-container{
+    margin-top: 50px;
+    padding: 30px;
+    border-top: solid 2px rgb(163, 160, 160);
+}
+.color-class{
+    color:  rgb(247, 119, 140);
+}
+.description-setting{
+    /* style="margin-top: 50px; */
+    border-bottom: 2px solid rgb(163, 160, 160);
 }

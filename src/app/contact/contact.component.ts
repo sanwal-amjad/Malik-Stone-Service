@@ -13,16 +13,17 @@ export class ContactComponent implements OnInit {
   userName: String;
   message:String;
   country:String;
-  number:Number;
+  number:String;
   email:String;
   formObject :FormGroup;
+  firstLoad: boolean=true;
 
   constructor(  private contactService: ContactPageServiceService , private formBuild: FormBuilder) {
-   console.log("constructor working");
+  // console.log("constructor working");
       
       this.formObject= formBuild.group({
       name:['',Validators.required],
-      phon:['',[Validators.required, Validators.maxLength(11)] ],
+      phon:['',[Validators.required, Validators.maxLength(20)] ],
       ema:['',[Validators.required,Validators.email]],
       mes:['',Validators.required],
       count:['',Validators.required]
@@ -30,10 +31,33 @@ export class ContactComponent implements OnInit {
   }  
   
   ngOnInit(): void {
+    if(this.firstLoad) {
+    window.scroll(0,0);
+    this.firstLoad = false;
   }
-
+  }
+      //------------------------------------ NODE
   
-    sendDataToBackEnd()
+    // sendDataToBackEnd()
+    // {
+    //     let objectForData ={
+    //         name:this.userName,
+    //         message: this.message,
+    //         email:this.email,
+    //         phone:this.number,
+    //         country:this.country
+    //       }
+    //     console.log("in contact.ts ",objectForData)
+    //     this.contactService.mailSending(objectForData).subscribe(
+    //       (res: any) => { },
+    //       (err: any) => {})
+    //       alert("Information Sent")
+    //       this.resetAllStates();
+    //  }
+
+ //                               ----------------------------- PHP
+
+ sendDataToBackEnd()
     {
         let objectForData ={
             name:this.userName,
@@ -42,14 +66,14 @@ export class ContactComponent implements OnInit {
             phone:this.number,
             country:this.country
           }
-        console.log("in contact.ts ",objectForData)
-        this.contactService.mailSending(objectForData).subscribe(
+     //   console.log("in contact.ts ",objectForData)
+        this.contactService.createPolicy(objectForData).subscribe(
           (res: any) => { },
           (err: any) => {})
           alert("Information Sent")
           this.resetAllStates();
      }
-
+    
         
         // checkEmail(email:any) {
 

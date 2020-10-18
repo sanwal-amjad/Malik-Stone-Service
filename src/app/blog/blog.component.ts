@@ -7,11 +7,13 @@ import { FormGroup, FormControl,FormBuilder ,Validators,NgForm} from '@angular/f
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
-  name:any;
-  comment:any;
-  email:any;
+  name:String;
+  comment:String;
+  email:String;
+  date:Date= new Date();
   allComments:any = [];
   formObject:FormGroup;
+  firstLoad: boolean=true;
   
   constructor(private contactService: ContactPageServiceService , formBuild:FormBuilder) { 
     this.formObject = formBuild.group({
@@ -23,14 +25,19 @@ export class BlogComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if(this.firstLoad) {
+    window.scroll(0,0);
+    this.firstLoad = false;
+  }
   this.updateComments();
   }
   sendComment(){
  
       let obj={
-        clientName:this.name,
-        clientComment:this.comment,
-        clientEmail:this.email,
+        name:this.name,
+        comment:this.comment,
+        email:this.email,
+        date:this.date
       }
 
       this.contactService.sendComment(obj).subscribe(
@@ -51,10 +58,10 @@ export class BlogComponent implements OnInit {
     updateComments(){
       
       
-      this.contactService.getComments().subscribe(
+      this.contactService.getComment().subscribe(
         (res:any)=>{
           this.allComments=res;
-           console.log("coments coming from backend ", res);
+          // console.log("coments coming from backend ", res);
        },
         (err:any)=>{
     

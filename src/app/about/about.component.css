@@ -1,0 +1,57 @@
+.image-setting img{
+    width: 100%;
+    height: 100%;
+}
+.image-setting {
+height: 200px;
+width: 400px;
+overflow: hidden;
+
+}
+.image-setting-main img{
+    width: 100%;
+    height: 100%;
+}
+.image-setting-main {
+height: 500px;
+overflow: hidden;
+}
+.content-container{
+    margin-top:20px;
+}
+
+.images-container{
+    background-color: #ddd;
+    padding: 10px;
+    margin-top: 10px;
+}
+#rcorners1 {
+    border-radius: 150px;
+    background:  rgb(233, 97, 120);
+    padding: 10px;
+    /* width: 200px;
+    height: 150px; */
+  }
+@media only screen and (max-width: 995px) {
+    div.image-setting  {
+        width:auto;
+        height: auto;
+       }
+     }
+     div.image-setting-main {
+         width: auto;
+         height: auto;
+     }
+.quality-image-setting h1,p{
+    padding-top: 50px;
+}
+
+.paragrapgh p{
+    font-size: 20px;
+    text-align: center;
+}
+.paragrapgh h1{
+    text-align: center;
+    font: 40px;
+    font-weight: bold;
+}

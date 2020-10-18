@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
+  firstLoad: boolean=true;
 
   constructor() { }
 
   ngOnInit(): void {
+    
+  if(this.firstLoad) {
+    window.scroll(0,0);
+    this.firstLoad = false;
+  }
   }
   
 
