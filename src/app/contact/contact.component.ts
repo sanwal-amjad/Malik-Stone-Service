@@ -19,7 +19,7 @@ export class ContactComponent implements OnInit {
   firstLoad: boolean=true;
 
   constructor(  private contactService: ContactPageServiceService , private formBuild: FormBuilder) {
-   console.log("constructor working");
+  // console.log("constructor working");
       
       this.formObject= formBuild.group({
       name:['',Validators.required],
@@ -66,7 +66,7 @@ export class ContactComponent implements OnInit {
             phone:this.number,
             country:this.country
           }
-        console.log("in contact.ts ",objectForData)
+     //   console.log("in contact.ts ",objectForData)
         this.contactService.createPolicy(objectForData).subscribe(
           (res: any) => { },
           (err: any) => {})

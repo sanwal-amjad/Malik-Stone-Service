@@ -35,12 +35,12 @@ export class ContactPageServiceService {
     PHP_API_SERVER = "http://127.0.0.1:8080";
 
     sendComment(commendModal:CommentModal):Observable<CommentModal>{
-      return this.http.post<CommentModal>(`https://broadcast-chains.000webhostapp.com/server/createComment.php`, commendModal)
+      return this.http.post<CommentModal>(`http://malikstone.com/server/createComment.php`, commendModal)
     }
     createPolicy(policy: Policy): Observable<Policy>{
-      return this.http.post<Policy>(`https://broadcast-chains.000webhostapp.com/server/create.php`, policy);
+      return this.http.post<Policy>(`http://malikstone.com/server/create.php`, policy);
     }
     getComment(): Observable<CommentModal[]>{
-      return this.http.get<CommentModal[]>(`https://broadcast-chains.000webhostapp.com/server/readComment.php`);
+      return this.http.get<CommentModal[]>(`http://malikstone.com/server/readComment.php`);
     }
 }

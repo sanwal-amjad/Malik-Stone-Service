@@ -61,7 +61,7 @@ export class BlogComponent implements OnInit {
       this.contactService.getComment().subscribe(
         (res:any)=>{
           this.allComments=res;
-           console.log("coments coming from backend ", res);
+          // console.log("coments coming from backend ", res);
        },
         (err:any)=>{
     
