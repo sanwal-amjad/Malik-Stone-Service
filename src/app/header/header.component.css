@@ -48,3 +48,12 @@
     .pointer-setting:hover{
         cursor: pointer;
     }
+    /* a:link, a:visited{
+        color: darkblue;
+        padding: 0 1px;
+        text-decoration: none;
+    
+    } */
+    /* .nav ul li a:current {
+        background-color: red;
+     } */

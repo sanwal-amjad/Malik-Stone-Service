@@ -97,7 +97,7 @@ height: 650px;
 .why-choose-setting-5-paragragh{
         padding:0px 39px;
         font-size: 20px;
-        text-align: justify;
+        text-align: inherit;
 }
 .products{
     margin-top:30px;

@@ -17,7 +17,7 @@ export class ContactComponent implements OnInit {
   email:String;
   formObject :FormGroup;
   firstLoad: boolean=true;
-
+  alertStatus:any= [];
   constructor(  private contactService: ContactPageServiceService , private formBuild: FormBuilder) {
   // console.log("constructor working");
       
@@ -68,9 +68,19 @@ export class ContactComponent implements OnInit {
           }
      //   console.log("in contact.ts ",objectForData)
         this.contactService.createPolicy(objectForData).subscribe(
-          (res: any) => { },
+          (res: any) => {
+            if(res.status=='true')
+            {
+              alert("Information Sent")
+            }
+            else if(res.status=='false')
+            {
+              alert("Try again Please")
+            }  
+           },
           (err: any) => {})
-          alert("Information Sent")
+          // console.log ("status alert: ", this.alertStatus);
+          
           this.resetAllStates();
      }
     
